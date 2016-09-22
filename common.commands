@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "-->MOST USED COMMANDS<--
+cd 'directory' - change directory.
+chmod [u|g|o]+[r|w|x] 'file name' - change permisions for a chosen file.
+pwd - tells your your present working directory.
+touch 'file name' - creats a file and updates the date stamp on existing files.
+vi 'file name' - edit file command which is followed by the name of the file."
