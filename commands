@@ -1,7 +1,6 @@
 #!/bin/bash
 
 clear
-
 echo "."
 
 sleep 1
@@ -22,13 +21,14 @@ sleep 2
 
 clear
 
-function command_menu {
-
 echo ""
 
 echo "What type of commands can I help you remember?"
 
 echo ""
+
+function command_menu {
+
 
 echo "$USER please choose from the followings options by typing the number and pressing enter"
 
@@ -58,9 +58,7 @@ echo -e "\E[0;1;36m pwd\E[0m - tells your your present working directory."
 echo -e "\E[0;1;36m touch\E[0m  \E[0;3;32m'file name'\E[0m - creates a file and updates the date stamp on existing files."
 
 echo -e "\E[0;1;36m vi\E[0m  \E[0;3;32m'file name'\E[0m- edit file command which is followed by the name of the file."
-
 echo ""
-
 sleep 1
 
 ;;
@@ -77,8 +75,7 @@ sleep 1
 
 ;;
 
-
-#MORE OPTIONS TO BE ADDED SOON. OPEN TO SUGGUESTIONS
+#MORE OPTIONS TO BE ADDED SOON. OPEN TO SUGGUESTIONS 
 
 3|3.) echo -e "currently just a reminder to myself that this is a growing project - please make another selection"
 echo ""
@@ -101,3 +98,4 @@ command_menu
 
 
 #I WANTED TO ADD A HISTORY COMMAND IN HERE AS A QUICK OPTION TO REMIND USERS OF MOST USED COMMANDS BUT ITS JUST NOT WORKING IN A SHELL FOR ME. POSSIBLE FUTURE UPDATE BUT IM LEAVING IT ALONE FOR NOW
+
