@@ -2,19 +2,9 @@
 
 clear
 
-echo -n "."
-
-sleep .25
-
-echo -n "."
-
-sleep .25
-
-echo -n "."
-
-sleep .25
-
-echo "Hello $USER"
+for i in {1..3}; do
+	echo -n "." ;sleep .25
+done; echo "Hello $USER"
 
 sleep 2
 
@@ -67,11 +57,11 @@ sleep 1
 
 # I NEED TO ADD COLOR TO THESE COMMANDS AND FINISH THE DEFINITIONS FOR THEM THE "?" ARE PLACE HOLDERS
 
-2|2.) echo -e "git status - ?????"
-echo -e "git add 'file name' - ??????"
-echo -e "git commit - ?????"
-echo -e "git push - uploads commited files to the github website"
-echo -e "git clone 'URL' - copys a file from the selected git hub URL"
+2|2.) echo -e "git status - Check status of files in git repository."
+echo -e "git add 'file name' - Add changed file to staging area."
+echo -e "git commit - Commit changes that have been staged."
+echo -e "git push - uploads commited files to the github website."
+echo -e "git clone 'URL' - copys a file from the selected git hub URL."
 echo ""
 sleep 1
 
@@ -105,3 +95,5 @@ command_menu
 
 
 #I WANTED TO ADD A HISTORY COMMAND IN HERE AS A QUICK OPTION TO REMIND USERS OF MOST USED COMMANDS BUT ITS JUST NOT WORKING IN A SHELL FOR ME. POSSIBLE FUTURE UPDATE BUT IM LEAVING IT ALONE FOR NOW
+
+# No commits in 4 days makes me a sad panda
