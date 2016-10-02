@@ -2,19 +2,9 @@
 
 clear
 
-echo  "."
-
-sleep .25
-
-echo  "."
-
-sleep .25
-
-echo  "."
-
-sleep .25
-
-echo "Hello $USER"
+for i in {1..3}; do
+	echo -n "." ;sleep .25
+done; echo "Hello $USER"
 
 sleep 2
 
@@ -82,13 +72,13 @@ sleep 1
 
 3|3.) echo -e "\E[4;33;40m-->GIT COMMMANDS<--\E[0m"
 
-echo -e "\E[0;1;36m git status \E[0m  - Lists new or modified files to be committed"
+echo -e "\E[0;1;36m git status \E[0m  - Check status of files in git repository"
 
-echo -e "\E[0;1;36m git add \E[0m \E[0;3;32m 'file name' - "
+echo -e "\E[0;1;36m git add \E[0m \E[0;3;32m 'file name' \E[0m - Add changed file to staging area."
 
-echo -e "\E[0;1;36m git commit \E[0m - ?????"
+echo -e "\E[0;1;36m git commit \E[0m - Commit changes that have been staged."
 
-echo -e "\E[0;1;36m git push \E[0m - uploads commited files to the github website"
+echo -e "\E[0;1;36m git push \E[0m - uploads commited files to the github website."
 
 echo -e "\E[0;1;36m git clone \E[0m \E[0;3;32m 'URL' \E[0m - copys a file from the selected git hub URL"
 
@@ -128,3 +118,5 @@ command_menu
 
 
 #I WANTED TO ADD A HISTORY COMMAND IN HERE AS A QUICK OPTION TO REMIND USERS OF MOST USED COMMANDS BUT ITS JUST NOT WORKING IN A SHELL FOR ME. POSSIBLE FUTURE UPDATE BUT IM LEAVING IT ALONE FOR NOW
+
+# No commits in 4 days makes me a sad panda
