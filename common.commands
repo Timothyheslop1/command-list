@@ -2,15 +2,15 @@
 
 clear
 
-echo -n "."
+echo  "."
 
 sleep .25
 
-echo -n "."
+echo  "."
 
 sleep .25
 
-echo -n "."
+echo  "."
 
 sleep .25
 
@@ -30,15 +30,19 @@ echo "What type of commands can I help you remember?"
 
 echo ""
 
-echo "$USER please choose from the followings options by typing the number and pressing enter"
+echo "$USER please choose from the followings options by typing the number and pressing enter."
 
 echo""
 
-echo "1. common file and directory commands"
+echo "1. A reminder of your most used commands."
 
-echo "2. git commands"
+echo "2. Common file and directory commands."
 
-echo "3. RESERVED FOR FUTURE USE"
+echo "3. Git commands."
+
+echo "4. RESERVED FOR FUTURE USE."
+
+echo "5. Quit."
 
 echo ""
 
@@ -47,7 +51,15 @@ read -p "~~>" OPTION
 # THE FIRST OPTION IS DONE WITH AESTHETICS, THOUGH MORE COMMANDS WILL BE ADDED AT LEAST 10 UNDER EACH OPTION
 
 case $OPTION in
-1|1.) echo -e "\E[4;33;40m-->COMMON FILE COMMANDS<--\E[0m"
+1|1.) cat /home/$USER/.bash_history | nl | tr -s " " | awk '{CMD[$2]++;count++;}END {for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -va "./" | column -c3 -s " " -t | sort -nr | nl | head -n 10
+
+echo ""
+
+sleep 1
+
+;;
+
+2|2.) echo -e "\E[4;33;40m-->COMMON FILE COMMANDS<--\E[0m"
 
 echo -e "\E[0;1;36m cd \E[0m \E[0;3;32m'directory'\E[0m - change directory."
 
@@ -55,7 +67,8 @@ echo -e "\E[0;1;36m chmod \E[0m \E[0;3;32m[u|g|o]+[r|w|x] 'file name'\E[0m - cha
 
 echo -e "\E[0;1;36m pwd\E[0m - tells your your present working directory."
 
-echo -e "\E[0;1;36m touch\E[0m  \E[0;3;32m'file name'\E[0m - creates a file and updates the date stamp on existing files."
+echo -e "\E[0;1;36m touch\E[0m  \E[0;3;32m'file name'\E[0m - creates a file and updates the date stamp on existing 
+files."
 
 echo -e "\E[0;1;36m vi\E[0m  \E[0;3;32m'file name'\E[0m- edit file command which is followed by the name of the file."
 
@@ -67,12 +80,22 @@ sleep 1
 
 # I NEED TO ADD COLOR TO THESE COMMANDS AND FINISH THE DEFINITIONS FOR THEM THE "?" ARE PLACE HOLDERS
 
-2|2.) echo -e "git status - ?????"
-echo -e "git add 'file name' - ??????"
-echo -e "git commit - ?????"
-echo -e "git push - uploads commited files to the github website"
-echo -e "git clone 'URL' - copys a file from the selected git hub URL"
+3|3.) echo -e "\E[4;33;40m-->GIT COMMMANDS<--\E[0m"
+
+echo -e "\E[0;1;36m git status \E[0m  - Lists new or modified files to be committed"
+
+echo -e "\E[0;1;36m git add \E[0m \E[0;3;32m 'file name' - "
+
+echo -e "\E[0;1;36m git commit \E[0m - ?????"
+
+echo -e "\E[0;1;36m git push \E[0m - uploads commited files to the github website"
+
+echo -e "\E[0;1;36m git clone \E[0m \E[0;3;32m 'URL' \E[0m - copys a file from the selected git hub URL"
+
+echo -e "\E[0;1;36m git pull \E[0m \E[0;3;32m 'URL' \E[0m - ??????" 
+
 echo ""
+
 sleep 1
 
 ;;
@@ -80,13 +103,13 @@ sleep 1
 
 #MORE OPTIONS TO BE ADDED SOON. OPEN TO SUGGUESTIONS
 
-3|3.) echo -e "currently just a reminder to myself that this is a growing project - please make another selection"
+4|4.) echo -e "currently just a reminder to myself that this is a growing project - please make another selection"
 echo ""
 sleep 1
 
 ;;
 
-exit|quit) exit 0
+exit|quit|q|5|5.) exit 0
 
 ;;
 
