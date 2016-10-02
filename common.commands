@@ -57,6 +57,8 @@ echo -e "\E[0;1;36m cd \E[0m \E[0;3;32m'directory'\E[0m - change directory."
 
 echo -e "\E[0;1;36m chmod \E[0m \E[0;3;32m[u|g|o]+[r|w|x] 'file name'\E[0m - change permisions for a chosen file"
 
+echo -e "\E[0;1;36m chown \E[0m \E[0;3;32m\$USER[:\$GROUP] 'file name'\E[0m"
+
 echo -e "\E[0;1;36m pwd\E[0m - tells your your present working directory."
 
 echo -e "\E[0;1;36m touch\E[0m  \E[0;3;32m'file name'\E[0m - creates a file and updates the date stamp on existing 
