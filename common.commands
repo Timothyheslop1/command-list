@@ -39,7 +39,7 @@ echo ""
 read -p "~~>" OPTION
 
 # FIRST OPTION NOW LISTS YOUR 10 MOST USED COMMANDS AS A REMINDER AS WELL AS
-THEIR PERCENTAGES.
+#THEIR PERCENTAGES.
 
 case $OPTION in
 1|1.) cat /home/$USER/.bash_history | nl | tr -s " " | awk '{CMD[$2]++;count++;}END {for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -va "./" | column -c3 -s " " -t | sort -nr | nl | head -n 10
